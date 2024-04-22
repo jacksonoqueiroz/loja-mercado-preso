@@ -1,0 +1,12 @@
+{
+	"description": "Teste site com MVC",
+	"authors": [
+		{
+			"name": "Jackson",
+			"email": "jackson.oqueiroz@gmail.com"
+		}
+	],
+	"require": {
+		"phpmailer/phpmailer": "^6.9"
+	}
+}
