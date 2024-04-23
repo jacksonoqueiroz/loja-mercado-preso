@@ -16,7 +16,7 @@ if (isset($_POST['enviar'])) {
 
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
+            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
             $mail->isSMTP();                                            
             $mail->Host       = 'smtp.gmail.com';                     
             $mail->SMTPAuth   = true;                                   
@@ -40,6 +40,19 @@ if (isset($_POST['enviar'])) {
                     E-mail: " . $_POST['email'] . "<br>
                     E-mail: " . $_POST['telefone'] . "<br>
                     Mensagem:<br>" . $_POST['comentario'];
+                    ?>
+
+                    <container>
+                        <row>
+                            <columns>
+                                <center>
+                                    <h1><?php echo $_POST['nome']; ?></h1>
+                                </center>
+                            </columns>
+                        </row>
+                    </container>
+
+                    <?php
             
 
             $mail->Body    = $body;            
@@ -52,3 +65,39 @@ if (isset($_POST['enviar'])) {
 }else{
     echo "Erro ao enviar o email, acesso não foi via formulário!";
 }
+?>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Preso</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="m-conteudo" id="modal-sucesso">
+        <div class="modal">
+            <img src="img/logo.png" alt="Logo Mercado Preso">
+            
+            <h2>Obrigado pela Mesagem!</h2>
+            
+            <p>Nossa equipe já recebeu o seu <span>e-mail</span> e estamos tomando
+                as devidas providências.</p>
+            
+            <p>Entraremos em <span>contato</span> em breve.</p>
+            
+            <button onclick="sair()" class="fechar">FECHAR</button>
+        </div>
+    </div>
+    
+    
+    <!-----------------Ativar a página do JAVASCRIPT-------------->
+    <script src="js/sucesso.js"></script>
+
+
+</body>
+</html>
