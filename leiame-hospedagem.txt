@@ -7,7 +7,10 @@ Porta: 21
 Nome usuário: loja-modelo-app
 Senha: #G08v15e21
 
+<<<<<<< HEAD
 Banco de Dados
 Nome: id21578295_site_mp
 Nome usuario: id21578295_administrador
 senha: #G08v15e21
+=======
+>>>>>>> 0f494f63f4e6dd18f820963ee18ea1aa1e761d74
