@@ -40,24 +40,11 @@ if (isset($_POST['enviar'])) {
                     E-mail: " . $_POST['email'] . "<br>
                     E-mail: " . $_POST['telefone'] . "<br>
                     Mensagem:<br>" . $_POST['comentario'];
-                    ?>
-
-                    <container>
-                        <row>
-                            <columns>
-                                <center>
-                                    <h1><?php echo $_POST['nome']; ?></h1>
-                                </center>
-                            </columns>
-                        </row>
-                    </container>
-
-                    <?php
-            
+                    
 
             $mail->Body    = $body;            
             $mail->send();
-            echo 'E-mail Recebido com sucesso!Ufa!';
+            //echo 'E-mail Recebido com sucesso!Ufa!';
         } catch (Exception $e) {
             echo "Não Enviou! Ah!: {$mail->ErrorInfo}";
         }

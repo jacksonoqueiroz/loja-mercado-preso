@@ -32,11 +32,11 @@
         <div class="cad" id="cadastro">
             <h1>Cadastro de Clientes</h1>
             <form action="cadastro.php" method="post">
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"><br>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="off"><br>
 
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail"><br>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="off"><br>
 
-                <input type="password" id="senha" name="senha" placeholder="Digite uma senha segura"><br>
+                <input type="password" id="senha" name="senha" placeholder="Digite uma senha segura" autocomplete="off"><br>
 
                 <input type="radio" id="feminino" name="sexo" value="F" name="sexo">Feminino
 
@@ -99,11 +99,34 @@
             $clientes = mysqli_query($conexao, "INSERT INTO cadastro_clientes(nome_cliente, 
             email_cliente, senha_cliente, sexo_cliente) VALUES ('$nome', '$email', '$senha', '$sexo')");
 
-            header('Location:entrar.php');
+            //header('Location:entrar.php');
+            ?>
+
+                <!-- MODAL SUCESSO -->
+
+                <div class="m-conteudo" id="modal-sucesso">
+                    <div class="modal">
+                        <img src="img/logo.png" alt="Logo Mercado Preso">
+                        
+                        <h2>Obrigado pelo Cadastro!</h2>
+                        
+                        <p>Continue visitando e comprando nossos produtos <span>e-mail</span> e estamos tomando
+                            as devidas providências.</p>
+                        
+                        <p>Duvidas Entre em <span>contato.</p>
+                        
+                        <button onclick="sair()" class="fechar">FECHAR</button>
+                    </div>
+                </div>
+                
+            </span>
+            <?php
         }
 
     ?>
 
+    <!-----------------Ativar a página do JAVASCRIPT-------------->
+    <script src="js/sucesso.js"></script>
 
 </body>
 </html>

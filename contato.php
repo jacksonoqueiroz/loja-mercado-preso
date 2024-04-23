@@ -31,7 +31,7 @@
 
         <div class="cont">
             <h1>FALE CONOSCO</h1>
-            <form action="email.php" method="POST">
+            <form action="envio.php" method="POST">
                 <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
                 <br>
                 <input type="email" name="email" id="nome" placeholder="Digite o seu email">
